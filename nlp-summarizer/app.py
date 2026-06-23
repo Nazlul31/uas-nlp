@@ -5,7 +5,7 @@ from transformers import MBartTokenizerFast as MBartTokenizer, MBartForCondition
 
 # Mengatur konfigurasi halaman Streamlit agar terlihat premium dan menarik
 st.set_page_config(
-    page_title="Peringkas Berita Indonesia 🇮🇩",
+    page_title="Peringkas Berita Indonesia",
     page_icon="📰",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -111,7 +111,7 @@ with st.spinner("Memuat model NLP... Harap tunggu sebentar."):
         st.stop()
 
 # Header Antarmuka Pengguna (UI)
-st.markdown("<h1 class='main-title'>Peringkas Berita Indonesia 🇮🇩</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-title'>Peringkas Berita Indonesia</h1>", unsafe_allow_html=True)
 st.markdown("<p class='subtitle'>Ringkas artikel berita panjang Anda secara otomatis menggunakan model Transformer mBART yang telah di-fine-tune.</p>", unsafe_allow_html=True)
 
 # Area Input Teks
@@ -124,7 +124,7 @@ text_input = st.text_area(
 # Tombol Aksi
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    submit_button = st.button("Ringkas Sekarang 🔍", use_container_width=True)
+    submit_button = st.button("Ringkas Sekarang", use_container_width=True)
 
 # Logika ketika tombol ditekan
 if submit_button:
@@ -172,6 +172,6 @@ if submit_button:
 # Footer halaman aplikasi
 st.markdown("""
     <div class="footer">
-        Dibuat untuk Proyek Akhir MK Pemrosesan Bahasa Alami – SINF6054
+        Dibuat oleh <b>Muhammad Nazlul Ramadhyan</b> (2308107010036) | Proyek Akhir MK Pemrosesan Bahasa Alami
     </div>
 """, unsafe_allow_html=True)
